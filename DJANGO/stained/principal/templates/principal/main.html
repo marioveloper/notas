@@ -1,0 +1,66 @@
+{% extends "principal/base.html" %}
+
+{% block title %}
+home
+{% endblock title %}
+
+{% block content %}
+
+    {% if request.user.is_authenticated %}
+    <h2>{{ request.user }}</h2>
+        <a href="{% url 'logout-view' %}">
+            <button class="btn btn primary">Logout</button>
+        </a>
+        <a href="{% url 'profile' %}">
+            <button class="btn btn primary">My Profile</button>
+        </a>
+    {% else %}
+        <a href="{% url 'signup-view' %}">
+            <button class="btn btn primary">Create an account</button>
+        </a>
+        <a href="{% url 'login' %}">
+            <button class="btn btn primary">Login</button>
+        </a>
+    {% endif %}
+<!--_____________________-->
+<!--Explicacion de la empresa-->
+<div class="empresa">
+    <h2>Informacion sobre la empresa</h2>
+    <div class="texto">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci voluptate consectetur aliquam
+            temporibus nobis veritatis beatae molestiae vero quibusdam laudantium! Adipisci, explicabo! Tempora
+            repudiandae aspernatur eum tempore dolore cumque eligendi?</p>
+    </div>
+    <div class="imagen">
+        <img src="../../static/images/img_inicio.png" alt="">
+    </div>
+</div>
+<!--Cerrar Explicacion de la empresa-->
+
+<!--Explicacion del sistema con imagen a la izquierda-->
+<div class="explicacion">
+    <h2>Explicacion del sistema</h2>
+    <div class="imagen">
+        <img src="../../static/images/img_explicacion.png" alt="">
+    </div>
+    <div class="texto">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod doloremque dicta eaque? Cupiditate officia
+            ut eum, veniam eius repudiandae maxime, rerum, labore atque odio amet. Distinctio doloremque cupiditate
+            totam recusandae.</p>
+    </div>
+</div>
+<!--Cerrar Explicacion del sistema con imagen a la izquierda-->
+
+<!--Planes-->
+<div class="planes">
+    <h2>Unico Plan</h2>
+    <div class="caja">
+        <h3>PLan Inicial</h3>
+        <img src="../../static/images/plan30.png" alt="">
+        <p>precio</p>
+        <h1>30</h1>
+    </div>
+</div>
+<!--Cerrar Planes-->
+
+{% endblock content %}

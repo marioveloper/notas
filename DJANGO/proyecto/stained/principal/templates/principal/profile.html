@@ -1,0 +1,49 @@
+{% extends "principal/base.html" %}
+
+{% block title %}
+My profile
+{% endblock title %}
+{% block content %}
+<div class="cuerpo">
+  <div class="contenedor">
+
+    <!-----------------------------PERFIL--------------------------------------------->
+    <div class="container">
+      <div class="card">
+        <div class="card-body list-group-item-warning">
+          <h2 class="card-title"><strong>@{{user.username}}</strong></h2>
+          <p class="card-text">Este es tu link de afiliacion, úsalo para invitar amigos y ganar beneficios cada vez que inviertan en la plataforma. <br><br>localhost:8000/{{user.profile.code}}</p>
+          <br>
+          <p>Para mayor interactibilidad, los pagos y las señales se brindan a traves de Telegram</p>
+          <button class="btn btn-primary"><a href="">Ir a Telegram</a></button>
+          <!-- <p>Recomendado por {{user.profile.recommended_by}}</p> -->
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Rango: {{user.profile.rank}}</li>
+          <li class="list-group-item">Dias Restantes: {{user.profile.days}}</li>
+          <li class="list-group-item">mi wallet: {{user.profile.wallet}}</li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link">Afiliados: {{user.profile.referrals}}</a>
+          <a href="#" class="card-link">Puntos: {{user.profile.points}}</a>
+        </div>
+      </div>
+    </div>
+
+    <!----------------------------REFERIDOS----------------------------------->
+    <div class="container">
+      {% if my_recs %}
+      {% for p in my_recs %}
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action list-group-item-warning">@{{p.user}} | rango
+          {{p.rank}} | referidos {{p.referrals}} | Dias Restantes: {{p.days}}</a>
+      </div>
+      {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+</div>
+<!------------------------------------------------------------------------------>
+
+{% endblock content %}

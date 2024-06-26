@@ -1,0 +1,45 @@
+{% extends "principal/base.html" %}
+
+{% block title %}
+signup
+{% endblock title %}
+
+{% block content %}
+
+<section class="vh-100" style="background-color: #508bfc;">
+
+
+    <div class="container">
+        <div class="col">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Es importante que coloque su direccion para recibir USDT(TRC20) en el campo
+                        Wallet, ya que esta direccion sera usada para efectuarle los pagos correspondientes a sus
+                        ganancias como parte de nuestro plan
+                        de afiliados.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+
+                        <h3 class="mb-5">Crear Cuenta</h3>
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button class="btn btn-warning btn-lg btn-block" type="submit">Crear Cuenta</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

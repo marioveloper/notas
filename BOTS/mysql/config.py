@@ -1,0 +1,9 @@
+USER='ux9dsrbwg2lfmx8c'
+PASSWORD='WcwdtMlxokWcnpZ1wcKk'
+HOST='bxczsjrrbainic4mxmh2-mysql.services.clever-cloud.com'
+DATABASE='bxczsjrrbainic4mxmh2'
+PORT='3306'
+TOKEN = '5483226127:'
+PAYMENTS_WALLET = ''
+ADMIN_ID = ("","",)
+CHANNEL_ID='-'

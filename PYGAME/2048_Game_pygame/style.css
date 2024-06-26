@@ -1,0 +1,45 @@
+body{
+    background-color: rgb(152, 78, 221);
+}
+div {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 3px;
+    border-radius: 5%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.i2{
+    background-color: rgb(148, 196, 238);
+}
+.i4{
+    background-color: rgb(174, 226, 122);
+}
+.i8{
+    background-color: rgb(248, 141, 103);
+}
+.i16{
+    background-color: rgb(167, 50, 50);
+}
+.i32{
+    background-color: rgb(165, 3, 3);
+}
+.i64{
+    background-color: rgb(42, 42, 212);
+}
+.i128{
+    background-color: rgb(5, 5, 121);
+}
+.i256{
+    background-color: rgb(148, 248, 47);
+}
+.i512{
+    background-color: rgb(48, 156, 48);
+}
+.i1024{
+    background-color: rgb(3, 58, 3);
+}
+.i2048{
+    background-color: rgb(0,0,0);
+}

@@ -1,0 +1,21 @@
+{% extends 'principal/base.html' %}
+
+{% block title %}
+login
+{% endblock title %}
+{% block content %}
+
+<a href="{% url 'main-view' %}">
+    <button class="btn btn primary">Home</button>
+</a>
+<a href="{% url 'signup-view' %}">
+    <button class="btn btn primary">Signup</button>
+</a>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button class="btn btn-primary" type="submit" id="submit">Entrar</button>
+</form>
+
+{% endblock content %}
